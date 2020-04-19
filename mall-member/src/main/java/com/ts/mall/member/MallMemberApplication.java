@@ -1,4 +1,4 @@
-package com.ts.mall.mallmember;
+package com.ts.mall.member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
