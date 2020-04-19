@@ -7,13 +7,16 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>mall</name>
     <description>商城-聚合服务</description>
-	<packaging>pom</packaging>
-<modules>
-    <module>mall-ware</module>
-    <module>mall-member</module>
-    <module>mall-coupon</module>
-    <module>mall-order</module>
-    <module>mall-product</module>
-</modules>
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>mall-ware</module>
+        <module>mall-member</module>
+        <module>mall-coupon</module>
+        <module>mall-order</module>
+        <module>mall-product</module>
+        <module>mall-common</module>
+    </modules>
 
 </project>
