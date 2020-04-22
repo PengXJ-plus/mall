@@ -48,6 +48,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return level1Menus;
     }
 
+    /**
+     * 递归查询
+     * @param root 对象
+     * @param all 全部对象
+     * @return 集合
+     */
     private List<CategoryEntity> getChildrens(CategoryEntity root, List<CategoryEntity> all){
         List<CategoryEntity> children = all.stream().filter(categoryEntity -> {
             return categoryEntity.getParentCid() == root.getCatId();
