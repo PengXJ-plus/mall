@@ -31,7 +31,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     /**
-     * 列表
+     * 列表树行结构
      */
     @RequestMapping("/list/tree")
     public R list(){
