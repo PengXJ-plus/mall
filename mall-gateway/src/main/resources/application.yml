@@ -5,6 +5,19 @@ spring:
       nacos:
         discovery:
           server-addr: 127.0.0.1:8848
+      gateway:
+        routes:
+          - id: admin_routs
+            uri: lb://renren-fast
+            predicates:
+              - Path=/api/**
+            filters:
+              - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+#http://localhost:88/api/captcha.jpg
+
 server:
   port: 88
+
+
 
