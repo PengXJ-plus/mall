@@ -42,10 +42,13 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
             return (menu1.getSort()==null?0:menu1.getSort()) - (menu2.getSort()==null?0:menu2.getSort());
         }).collect(Collectors.toList());
 
-
-
-
         return level1Menus;
+    }
+
+    @Override
+    public void removeMenus(List<Long> asList) {
+        //TODO 检查当前删除的菜单，是否被别的地方引用
+        baseMapper.deleteBatchIds(asList);
     }
 
     /**

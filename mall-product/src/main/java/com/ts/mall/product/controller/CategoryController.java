@@ -80,7 +80,7 @@ public class CategoryController {
     //@RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
 		categoryService.removeByIds(Arrays.asList(catIds));
-
+        categoryService.removeMenus(Arrays.asList(catIds));
         return R.ok();
     }
 
